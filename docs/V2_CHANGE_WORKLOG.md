@@ -2783,6 +2783,7 @@
   - `.venv\Scripts\python.exe -m pytest v2-api\tests\test_api.py -q`: `45 passed, 1 warning`.
   - `powershell -ExecutionPolicy Bypass -File scripts\build-vue-shell.ps1`: passed with existing Rollup PURE/chunk-size warnings.
   - `python scripts\verify_vue_migration_gate.py --strict-native`: passed.
+
 - Status:
   - Released to production by patch sync.
   - Commit: `1f5f53c`; tag: `v2.6.5`.
@@ -2827,3 +2828,22 @@
   - `.venv\Scripts\python.exe -m pytest v2-api\tests\test_api.py -q`: `45 passed, 1 warning`.
   - `powershell -ExecutionPolicy Bypass -File scripts\build-vue-shell.ps1`: passed with existing Rollup PURE/chunk-size warnings.
   - `python scripts\verify_vue_migration_gate.py --strict-native`: passed.
+
+### ChatGPT product manager onboarding brief
+
+- Date: 2026-06-22
+- Owner: Project engineer thread
+- Goal:
+  - Add a dedicated onboarding brief for a new ChatGPT product manager.
+  - Summarize the product purpose, user roles, core workflows, architecture, production rules, collaboration rules, current strengths, current risks, and next-stage roadmap.
+  - Provide a reusable prompt so the new product manager can quickly understand the project and start directing future work.
+- Files changed:
+  - `docs/CHATGPT_PM_PROJECT_BRIEF.md`
+  - `docs/V2_CHANGE_WORKLOG.md`
+- Runtime impact:
+  - Documentation only.
+  - No app version bump.
+  - No deployment required.
+- Validation:
+  - Markdown file created and reviewed.
+  - No credentials, tokens, passwords, or OSS secrets were written into the document.

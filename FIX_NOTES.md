@@ -854,6 +854,19 @@ Constructors needed a clear completion action after finishing field collection. 
 - `powershell -ExecutionPolicy Bypass -File scripts\build-vue-shell.ps1`: passed with existing Rollup PURE/chunk-size warnings.
 - `python scripts\verify_vue_migration_gate.py --strict-native`: passed.
 
+### Production deployment
+
+- Commit: `1f5f53c`.
+- Tag: `v2.6.5`.
+- Deployment method: patch sync into the existing production `current` directory; no full release replacement.
+- Backup path: `/opt/module-manager-v2/backups/runtime/20260622_221213_before_v2.6.5_patch`.
+- PostgreSQL dump size: `4547580` bytes.
+- Production `.env`, `data`, uploads preserved.
+- No Alembic migration.
+- Production checks passed: `/health`, `/login`, `/project-board`, `/task-hall`, `/construction`, `https://www.sgcc.online/login`.
+- `/openapi.json`: `404`.
+- Production Vue bundle contains `V2.6.5` and `提交施工任务`.
+
 ## 2026-06-22 - V2.6.3 安装人员 KPI 同楼栋地址聚类
 
 ### 修改原因

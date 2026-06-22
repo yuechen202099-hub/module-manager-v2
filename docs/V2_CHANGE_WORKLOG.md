@@ -2783,6 +2783,14 @@
   - `.venv\Scripts\python.exe -m pytest v2-api\tests\test_api.py -q`: `45 passed, 1 warning`.
   - `powershell -ExecutionPolicy Bypass -File scripts\build-vue-shell.ps1`: passed with existing Rollup PURE/chunk-size warnings.
   - `python scripts\verify_vue_migration_gate.py --strict-native`: passed.
+- Status:
+  - Released to production by patch sync.
+  - Commit: `1f5f53c`; tag: `v2.6.5`.
+  - Backup path: `/opt/module-manager-v2/backups/runtime/20260622_221213_before_v2.6.5_patch`.
+  - PostgreSQL dump size: `4547580` bytes.
+  - Production `.env`, `data`, uploads preserved; no Alembic migration.
+  - Production checks passed for `/health`, `/login`, `/project-board`, `/task-hall`, `/construction`, and `https://www.sgcc.online/login`; `/openapi.json` returned `404`.
+  - Production Vue bundle contains `V2.6.5` and `提交施工任务`.
   - `rg "field-entry-card|field-task-entry|异常任务 3|未匹配任务 97" v2-web\src\views v2-api\app\static\vue`: no matches.
 - Status:
   - Released to production by patch sync.
